@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}Home - NewsDaily{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-3xl font-bold mb-8">Latest News</h1>
+    
+    <!-- Articles -->
+    <div class="space-y-4">
+        {% for article in articles %}
+            <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-200">
+                <h2 class="text-xl font-semibold mb-2">
+                    <a href="{{ article.url }}" class="text-blue-600 hover:text-blue-800">
+                        {{ article.title }}
+                    </a>
+                </h2>
+                <p class="text-gray-600 text-sm">
+                    {{ article.date }} | {{ article.category }}
+                </p>
+            </article>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-center space-x-4 mt-8">
+        {% if page > 1 %}
+            <a href="?page={{ page - 1 }}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                Previous
+            </a>
+        {% endif %}
+        
+        <span class="px-4 py-2 bg-gray-200 rounded">
+            Page {{ page }}
+        </span>
+        
+        {% if articles|length == 10 %}
+            <a href="?page={{ page + 1 }}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                Next
+            </a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
