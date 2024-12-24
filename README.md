@@ -8,7 +8,7 @@ Targeted at working professionals aged 21–40, JhakaasRecommender focuses on ov
 
 The main website is built using the **Django framework**, ensuring a scalable, reliable, and efficient backend. Additionally, user authentication is streamlined through **Google Auth**, enabling a secure and hassle-free sign-in experience.
 
----
+
 
 ## Problem Statement
 News recommendations must perform well on fresh content: breaking news that hasn’t been viewed by many readers yet. Thus we need to leverage on the article content data available at publishing time, such as topics, categories, and tags, to build a content-based model, and match it to readers’ interests learnt from their reading histories. However, one drawback of the content-based recommendations is that when there’s not enough history about a user, the coverage of the recommendations will become very limited, which is the common cold-start problem in recommender systems.
@@ -23,7 +23,6 @@ The overarching goals are to:
 - Learn as much as possible about user interests from their initial interactions.
 - Maximize the coverage of the news corpus while optimizing clickthrough rates(CLR).
 
----
 
 ## Project Implementation
 The implementation of JhakaasRecommender is divided into three key stages, ensuring a structured approach to handling data, profiling, and recommendation generation.
@@ -71,7 +70,7 @@ The performance and effectiveness of the recommendation engine, referred to as *
 1. **Engagement Metrics**:These include indicators such as clickthrough rate (CTR), session duration, and user return rates, which measure how actively users interact with the recommendations.
 2. **Exploration-Exploitation Balance**: This evaluates the system’s ability to optimize recommendations by catering to both established user preferences and encouraging the discovery of new interests.
 3.**Coverage Metrics**: This metric tracks the percentage of the overall news corpus utilized in generating recommendations, ensuring a wide variety of content is leveraged.
----
+
 
 ## Technical Framework
 
@@ -84,7 +83,7 @@ The project adopts a modular architecture, with each component tailored to a spe
 
 This well-defined framework not only enhances the system's flexibility and efficiency but also ensures a robust foundation for future enhancements and scalability.
 
----
+
 
 ## Conclusion
 
