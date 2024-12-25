@@ -1,0 +1,40 @@
+<!-- index.html -->
+{% extends "articles/layout.html" %}
+
+{% block content %}
+<main>
+    <article class="featured">
+        <img src="/api/placeholder/1200/400" alt="Featured news">
+        <div class="featured-content">
+            <h1>New Climate Agreement Reached at Global Summit</h1>
+            <p>World leaders have reached a historic agreement on climate change, setting ambitious targets for reducing global emissions over the next decade. The landmark deal includes comprehensive measures for sustainable development and environmental protection.</p>
+        </div>
+    </article>
+
+    <section class="grid-news">
+        <article class="news-card">
+            <img src="/api/placeholder/400/200" alt="Tech Innovation News">
+            <div class="news-content">
+                <h2>Breakthrough in Quantum Computing</h2>
+                <p>Scientists announce major advancement in quantum computing technology, potentially revolutionizing data processing capabilities.</p>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img src="/api/placeholder/400/200" alt="Business News">
+            <div class="news-content">
+                <h2>Global Markets Hit Record High</h2>
+                <p>International markets surge as investor confidence grows amid positive economic indicators and strong corporate earnings reports.</p>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img src="/api/placeholder/400/200" alt="Healthcare News">
+            <div class="news-content">
+                <h2>Medical Research Breakthrough</h2>
+                <p>Researchers develop promising new treatment approach for chronic diseases, showing significant results in clinical trials.</p>
+            </div>
+        </article>
+    </section>
+</main>
+{% endblock %}
